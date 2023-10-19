@@ -1,0 +1,3 @@
+/OneNB/source/repos/TEST/계산기/.vs
+/OneNB/source/repos/TEST/계산기/계산기/bin
+/OneNB/source/repos/TEST/계산기/계산기/obj
