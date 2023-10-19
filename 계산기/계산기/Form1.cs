@@ -26,22 +26,22 @@ namespace 계산기
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "1";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "1";
-            }
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "1";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "1";
+            //}
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         ///////////////////// C /////////////////////
@@ -66,128 +66,128 @@ namespace 계산기
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "7";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "7";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "7";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "7";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "8";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "8";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "8";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "8";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "9";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "9";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "9";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "9";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "4";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "4";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "4";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "4";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "5";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "5";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "5";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "5";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "6";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "6";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "6";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "6";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         ///////////////////// 빼기 /////////////////////
@@ -202,44 +202,44 @@ namespace 계산기
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "2";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "2";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "2";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "2";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "3";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "3";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "3";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "3";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         ///////////////////// 더하기 /////////////////////
@@ -263,23 +263,23 @@ namespace 계산기
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            lbResult.Text = lbResult.Text.Replace(",", "");
-            if (lbResult.Text == "0" || opFlag == true)
-            {
-                lbResult.Text = "0";
-                opFlag = false;
-            }
-            else
-            {
-                if (lbResult.Text.Length == 16)
-                {
-                    return;
-                }
-                lbResult.Text += "0";
-            }
+            //lbResult.Text = lbResult.Text.Replace(",", "");
+            //if (lbResult.Text == "0" || opFlag == true)
+            //{
+            //    lbResult.Text = "0";
+            //    opFlag = false;
+            //}
+            //else
+            //{
+            //    if (lbResult.Text.Length == 16)
+            //    {
+            //        return;
+            //    }
+            //    lbResult.Text += "0";
+            //}
 
-            double v = double.Parse(lbResult.Text);
-            lbResult.Text = Comma(v, lbResult.Text);
+            //double v = double.Parse(lbResult.Text);
+            //lbResult.Text = Comma(v, lbResult.Text);
         }
 
         ///////////////////// (결과 =) /////////////////////
