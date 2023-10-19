@@ -297,7 +297,7 @@ namespace 계산기
                 case "×":
                     lbResult.Text = (lValue * rValue).ToString();
                     break;
-                case "/":
+                case "÷":
                     lbResult.Text = (lValue / rValue).ToString();
                     break;
             }
