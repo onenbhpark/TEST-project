@@ -8,3 +8,13 @@ C:\Users\OneNB\source\repos\TEST\계산기\계산기\obj\x64\Debug\계산기.csp
 C:\Users\OneNB\source\repos\TEST\계산기\계산기\obj\x64\Debug\계산기.csproj.CoreCompileInputs.cache
 C:\Users\OneNB\source\repos\TEST\계산기\계산기\obj\x64\Debug\계산기.exe
 C:\Users\OneNB\source\repos\TEST\계산기\계산기\obj\x64\Debug\계산기.pdb
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\bin\x64\Debug\계산기.exe.config
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\bin\x64\Debug\계산기.exe
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\bin\x64\Debug\계산기.pdb
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.csproj.AssemblyReference.cache
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.Form1.resources
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.Properties.Resources.resources
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.csproj.GenerateResource.cache
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.csproj.CoreCompileInputs.cache
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.exe
+C:\Users\OneNB\source\repos\TEST2\계산기\계산기\obj\x64\Debug\계산기.pdb

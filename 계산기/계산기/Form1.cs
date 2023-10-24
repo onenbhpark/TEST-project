@@ -6,10 +6,10 @@ namespace 계산기
     public partial class Form1 : Form
     {
         /* 변수선언
-        lvalue에 피연산자(기존숫자저장)
+        Value1에 피연산자(기존숫자저장)
         사칙연산 op에저장
         사칙연산 이후 숫자가 새로시작 flag사용 */
-        double lValue = 0;
+        decimal Value1 = 0;
         string op = string.Empty;
         bool opFlag = false;
 
@@ -24,32 +24,12 @@ namespace 계산기
             BorderStyle 변경 */
         }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "1";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "1";
-            //}
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
         ///////////////////// C /////////////////////
         private void btnC_Click(object sender, EventArgs e)
         {
             lbResult.Text = "0";
             lbExp.Text = "";
-            lValue = 0;
+            Value1 = 0;
             op = string.Empty;
             opFlag = false;
         }
@@ -58,252 +38,67 @@ namespace 계산기
         private void btnBC_Click(object sender, EventArgs e)
         {
             lbResult.Text = lbResult.Text.Remove(lbResult.Text.Length - 1);
-            // 더이상 지울숫자가없을때 에러발생
             if
-                (lbResult.Text.Length == 0)
+                (lbResult.Text.Length == 0 || (lbResult.Text.Length == 1 && lbResult.Text.Contains("-")))
                 lbResult.Text = "0";
+            decimal v = decimal.Parse(lbResult.Text);
+            lbResult.Text = Comma(v, lbResult.Text);
         }
 
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "7";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "7";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "8";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "8";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "9";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "9";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "4";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "4";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "5";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "5";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "6";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "6";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        ///////////////////// 빼기 /////////////////////
+        ///////////////////// " - " /////////////////////
         private void button12_Click(object sender, EventArgs e)
         {
             opFlag = true;
-            lValue = double.Parse(lbResult.Text);
+            Value1 = decimal.Parse(lbResult.Text);
             Button btn = sender as Button;
             op = btn.Text.ToString();
-            lbExp.Text = lValue + " " + op;
+            lbExp.Text = Value1 + " " + op;
         }
 
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "2";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "2";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "3";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "3";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        ///////////////////// 더하기 /////////////////////
+        ///////////////////// " + " /////////////////////
         private void button16_Click(object sender, EventArgs e)
         {
             opFlag = true;
-            lValue = double.Parse(lbResult.Text);
+            Value1 = decimal.Parse(lbResult.Text);
             Button btn = sender as Button;
             op = btn.Text.ToString();
-            lbExp.Text = lValue + " " + op;
+            lbExp.Text = Value1 + " " + op;
         }
 
         ///////////////////// (+/-) /////////////////////
         private void button17_Click(object sender, EventArgs e)
         {
-            double c = double.Parse(lbResult.Text);
+            decimal c = decimal.Parse(lbResult.Text);
             lbResult.Text = (-c).ToString();
-            double v = double.Parse(lbResult.Text);
+            decimal v = decimal.Parse(lbResult.Text);
             lbResult.Text = Comma(v, lbResult.Text);
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {
-            //lbResult.Text = lbResult.Text.Replace(",", "");
-            //if (lbResult.Text == "0" || opFlag == true)
-            //{
-            //    lbResult.Text = "0";
-            //    opFlag = false;
-            //}
-            //else
-            //{
-            //    if (lbResult.Text.Length == 16)
-            //    {
-            //        return;
-            //    }
-            //    lbResult.Text += "0";
-            //}
-
-            //double v = double.Parse(lbResult.Text);
-            //lbResult.Text = Comma(v, lbResult.Text);
-        }
-
-        ///////////////////// (결과 =) /////////////////////
+        ///////////////////// " = " /////////////////////
         private void button19_Click(object sender, EventArgs e)
         {
-            double rValue = double.Parse(lbResult.Text);
+            decimal Value2 = decimal.Parse(lbResult.Text);
             switch (op)
             {
                 case "+":
-                    lbResult.Text = (lValue + rValue).ToString();
+                    lbResult.Text = (Value1 + Value2).ToString();
                     break;
                 case "-":
-                    lbResult.Text = (lValue - rValue).ToString();
+                    lbResult.Text = (Value1 - Value2).ToString();
                     break;
                 case "×":
-                    lbResult.Text = (lValue * rValue).ToString();
+                    lbResult.Text = (Value1 * Value2).ToString();
                     break;
                 case "÷":
-                    lbResult.Text = (lValue / rValue).ToString();
+                    lbResult.Text = (Value1 / Value2).ToString();
                     break;
             }
-            double v = double.Parse(lbResult.Text);
+            decimal v = decimal.Parse(lbResult.Text);
             lbResult.Text = Comma(v, lbResult.Text);
-            lbExp.Text = lValue + " " + op + " " + rValue + " =";
+            //string sMsg;
+            //sMsg = string.Format("Value1{0}:Value2{1}:result{2},", Value1, Value2, lbResult.Text);
+            //Console.WriteLine(sMsg);
+            lbExp.Text = Value1 + " " + op + " " + Value2 + " =";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -315,25 +110,25 @@ namespace 계산기
         {
 
         }
-        ///////////////////// (나누기) /////////////////////
+        ///////////////////// " / " /////////////////////
         private void button1_Click(object sender, EventArgs e)
         {
             opFlag = true;
-            lValue = double.Parse(lbResult.Text);
+            Value1 = decimal.Parse(lbResult.Text);
             Button btn = sender as Button;
             op = btn.Text.ToString();
-            lbExp.Text = lValue + " " + op;
+            lbExp.Text = Value1 + " " + op;
         }
-        ///////////////////// (곱하기) /////////////////////
+        ///////////////////// " * " /////////////////////
         private void button2_Click(object sender, EventArgs e)
         {
             opFlag = true;
-            lValue = double.Parse(lbResult.Text);
+            Value1 = decimal.Parse(lbResult.Text);
             Button btn = sender as Button;
             op = btn.Text.ToString();
-            lbExp.Text = lValue + " " + op;
+            lbExp.Text = Value1 + " " + op;
         }
-        ///////////////////// (소수점) /////////////////////
+        ///////////////////// " . " /////////////////////
         private void button3_Click(object sender, EventArgs e)
         {
             if (lbResult.Text.Contains("."))
@@ -341,8 +136,8 @@ namespace 계산기
             else
                 lbResult.Text += ".";
         }
-        ///////////////////// (콤마) /////////////////////
-        private static string Comma(double v, string s)
+        ///////////////////// " , " /////////////////////
+        private static string Comma(decimal v, string s)
         {
             int pos = 0;
             if (s.Contains("."))
@@ -365,11 +160,16 @@ namespace 계산기
             // N2=소수점두자리 천단위마다 콤마
         }
 
+        ///////////////////// " Number " /////////////////////
         private void btn_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             string s = btn.Name.Remove(0, 3);
-            
+            //string sMsg;
+            string sCompare = lbResult.Text.Replace(",", "");
+            sCompare = sCompare.Replace("-", "");
+            sCompare = sCompare.Replace(".", "");
+
             if (lbResult.Text == "0" || opFlag == true)
             {
                 lbResult.Text = s;
@@ -377,14 +177,18 @@ namespace 계산기
             }
             else
             {
-                if (lbResult.Text.Length == 21)
+                //sMsg = string.Format("Text : {0} | Length : {1}", lbResult.Text, lbResult.Text.Length);
+                //Console.WriteLine(sMsg);
+                //sMsg = string.Format("sCompare : {0} | Length : {1}", sCompare, sCompare.Length);
+                //Console.WriteLine(sMsg);
+                if (sCompare.Length == 16)
                 {
                     return;
                 }
                 lbResult.Text += s;
             }
 
-            double v = double.Parse(lbResult.Text);
+            decimal v = decimal.Parse(lbResult.Text);
             lbResult.Text = Comma(v, lbResult.Text);
         }
     }
